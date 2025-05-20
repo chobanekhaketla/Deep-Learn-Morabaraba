@@ -47,6 +47,7 @@ class DeepQAgent:
         self.batch_size = batch_size
         self.input_size = 24  # Number of board positions.
         self.output_size = 24  # Possible placing actions.
+        self.model = DQN()
         
         self.policy_net = DQN(self.input_size, self.output_size)
         self.target_net = DQN(self.input_size, self.output_size)
