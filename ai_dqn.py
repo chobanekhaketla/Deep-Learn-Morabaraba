@@ -4,6 +4,7 @@ import torch.optim as optim
 import random
 import numpy as np
 import pickle
+import os
 
 # Define the neural network model for approximating Q-values.
 class DQN(nn.Module):
@@ -36,8 +37,6 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
-# ... (other parts of ai_dqn.py remain unchanged)
-
 class DeepQAgent:
     def __init__(self, player, lr=0.001, gamma=0.9, epsilon=0.2, buffer_capacity=10000, batch_size=32):
         self.player = player
@@ -47,7 +46,6 @@ class DeepQAgent:
         self.batch_size = batch_size
         self.input_size = 24  # Number of board positions.
         self.output_size = 24  # Possible placing actions.
-        self.model = DQN()
         
         self.policy_net = DQN(self.input_size, self.output_size)
         self.target_net = DQN(self.input_size, self.output_size)
@@ -144,11 +142,13 @@ class DeepQAgent:
         return q_values
     
     def save_model(self, path):
-        torch.save(self.model.state_dict(), path)
+        torch.save(self.policy_net.state_dict(), path)
 
     def load_model(self, path):
-        self.model.load_state_dict(torch.load(path))
-        self.model.eval() # Set the model to evaluation mode for inference
+        if os.path.exists(path):
+            self.policy_net.load_state_dict(torch.load(path))
+            self.target_net.load_state_dict(torch.load(path))
+            self.policy_net.eval()  # Set the model to evaluation mode for inference
 
     def save_replay_buffer(self, path):
         with open(path, "wb") as f:
