@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import random
 import numpy as np
+import pickle
 
 # Define the neural network model for approximating Q-values.
 class DQN(nn.Module):
@@ -140,3 +141,19 @@ class DeepQAgent:
         with torch.no_grad():
             q_values = self.policy_net(state_tensor).squeeze(0).numpy()
         return q_values
+    
+    def save_model(self, path):
+        torch.save(self.model.state_dict(), path)
+
+    def load_model(self, path):
+        self.model.load_state_dict(torch.load(path))
+        self.model.eval() # Set the model to evaluation mode for inference
+
+    def save_replay_buffer(self, path):
+        with open(path, "wb") as f:
+            pickle.dump(self.replay_buffer, f)
+
+    def load_replay_buffer(self, path):
+        if os.path.exists(path):
+            with open(path, "rb") as f:
+                self.replay_buffer = pickle.load(f)

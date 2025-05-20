@@ -363,6 +363,16 @@ AI_MODE = True  # Enable AI self-play
 deep_agent_x = DeepQAgent('X')
 deep_agent_o = DeepQAgent('O')
 
+import os
+if os.path.exists("model_x.pth"):
+    deep_agent_x.load_model("model_x.pth")
+if os.path.exists("model_o.pth"):
+    deep_agent_o.load_model("model_o.pth")
+if os.path.exists("buffer_x.pkl"):
+    deep_agent_x.load_replay_buffer("buffer_x.pkl")
+if os.path.exists("buffer_o.pkl"):
+    deep_agent_o.load_replay_buffer("buffer_o.pkl")
+
 def ai_decide_and_move():
     global phase, current_player, info_message, selected_from
     # If in removal phase, perform a random valid removal.
@@ -510,6 +520,13 @@ while running:
                 else:
                     deep_agent_x.update(-1, board_state, positions)
                     deep_agent_o.update(1, board_state, positions)
+
+                # Auto-save agents and replay buffers after each game.
+                deep_agent_x.save_model("model_x.pth")
+                deep_agent_o.save_model("model_o.pth")
+                deep_agent_x.save_replay_buffer("buffer_x.pkl")
+                deep_agent_o.save_replay_buffer("buffer_o.pkl")
+
                 # Set timer to auto-restart after 2000 milliseconds.
                 pygame.time.set_timer(AUTO_RESTART_EVENT, 2000)
                 break
