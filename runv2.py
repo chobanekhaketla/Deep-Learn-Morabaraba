@@ -9,12 +9,12 @@ DATASET_FILE = "morabararaba_dataset.json"
 # Load the dataset if it exists, otherwise create an empty one.
 if os.path.exists(DATASET_FILE):
     with open(DATASET_FILE, "r") as f:
-        dataset = json.load(f)
+        all_games = json.load(f)
 else:
     all_games = []
 
 current_game_moves = []
-turn_counter = 0
+turn_counter = 1
 
 # Initialize pygame and set up the window.
 pygame.init()
