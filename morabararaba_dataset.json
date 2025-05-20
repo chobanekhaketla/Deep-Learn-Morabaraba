@@ -20962,5 +20962,706 @@
       }
     ],
     "winner": "O"
+  },
+  {
+    "moves": [
+      {
+        "turn": 1,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "e5",
+        "captured": null
+      },
+      {
+        "turn": 2,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "a7",
+        "captured": null
+      },
+      {
+        "turn": 3,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "f2",
+        "captured": null
+      },
+      {
+        "turn": 4,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "b6",
+        "captured": null
+      },
+      {
+        "turn": 5,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "c3",
+        "captured": null
+      },
+      {
+        "turn": 6,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "e4",
+        "captured": null
+      },
+      {
+        "turn": 7,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "c5",
+        "captured": null
+      },
+      {
+        "turn": 8,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 9,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "a1",
+        "captured": null
+      },
+      {
+        "turn": 10,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 11,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "d2",
+        "captured": null
+      },
+      {
+        "turn": 12,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "b4",
+        "captured": null
+      },
+      {
+        "turn": 13,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "g1",
+        "captured": "g1"
+      },
+      {
+        "turn": 14,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 15,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "f6",
+        "captured": null
+      },
+      {
+        "turn": 16,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "a4",
+        "captured": null
+      },
+      {
+        "turn": 17,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "a7",
+        "captured": "a7"
+      },
+      {
+        "turn": 18,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "a7",
+        "captured": null
+      },
+      {
+        "turn": 19,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "g7",
+        "captured": null
+      },
+      {
+        "turn": 20,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "d6",
+        "captured": null
+      },
+      {
+        "turn": 21,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "g1",
+        "captured": "g1"
+      },
+      {
+        "turn": 22,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 23,
+        "player": "X",
+        "action": "place",
+        "from": null,
+        "to": "d7",
+        "captured": null
+      },
+      {
+        "turn": 24,
+        "player": "O",
+        "action": "place",
+        "from": null,
+        "to": "d3",
+        "captured": null
+      },
+      {
+        "turn": 25,
+        "player": "X",
+        "action": "move",
+        "from": "a1",
+        "to": "d1",
+        "captured": null
+      },
+      {
+        "turn": 26,
+        "player": "O",
+        "action": "capture",
+        "from": null,
+        "to": "g7",
+        "captured": "g7"
+      },
+      {
+        "turn": 27,
+        "player": "X",
+        "action": "move",
+        "from": "d1",
+        "to": "a1",
+        "captured": null
+      },
+      {
+        "turn": 28,
+        "player": "O",
+        "action": "move",
+        "from": "g4",
+        "to": "g7",
+        "captured": null
+      },
+      {
+        "turn": 29,
+        "player": "X",
+        "action": "move",
+        "from": "f2",
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 30,
+        "player": "O",
+        "action": "move",
+        "from": "f4",
+        "to": "g4",
+        "captured": null
+      },
+      {
+        "turn": 31,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "a7",
+        "captured": "a7"
+      },
+      {
+        "turn": 32,
+        "player": "O",
+        "action": "move",
+        "from": "b6",
+        "to": "a7",
+        "captured": null
+      },
+      {
+        "turn": 33,
+        "player": "X",
+        "action": "move",
+        "from": "d2",
+        "to": "d1",
+        "captured": null
+      },
+      {
+        "turn": 34,
+        "player": "O",
+        "action": "move",
+        "from": "d6",
+        "to": "b6",
+        "captured": null
+      },
+      {
+        "turn": 35,
+        "player": "X",
+        "action": "move",
+        "from": "f6",
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 36,
+        "player": "O",
+        "action": "move",
+        "from": "d3",
+        "to": "d2",
+        "captured": null
+      },
+      {
+        "turn": 37,
+        "player": "X",
+        "action": "move",
+        "from": "d5",
+        "to": "d6",
+        "captured": null
+      },
+      {
+        "turn": 38,
+        "player": "O",
+        "action": "move",
+        "from": "g4",
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 39,
+        "player": "X",
+        "action": "move",
+        "from": "c3",
+        "to": "d3",
+        "captured": null
+      },
+      {
+        "turn": 40,
+        "player": "O",
+        "action": "move",
+        "from": "e4",
+        "to": "e3",
+        "captured": null
+      },
+      {
+        "turn": 41,
+        "player": "X",
+        "action": "move",
+        "from": "e5",
+        "to": "e4",
+        "captured": null
+      },
+      {
+        "turn": 42,
+        "player": "O",
+        "action": "move",
+        "from": "g7",
+        "to": "f6",
+        "captured": null
+      },
+      {
+        "turn": 43,
+        "player": "X",
+        "action": "move",
+        "from": "e4",
+        "to": "e5",
+        "captured": null
+      },
+      {
+        "turn": 44,
+        "player": "O",
+        "action": "move",
+        "from": "f6",
+        "to": "g7",
+        "captured": null
+      },
+      {
+        "turn": 45,
+        "player": "X",
+        "action": "move",
+        "from": "f4",
+        "to": "g4",
+        "captured": null
+      },
+      {
+        "turn": 46,
+        "player": "O",
+        "action": "move",
+        "from": "e3",
+        "to": "e4",
+        "captured": null
+      },
+      {
+        "turn": 47,
+        "player": "X",
+        "action": "move",
+        "from": "d6",
+        "to": "f6",
+        "captured": null
+      },
+      {
+        "turn": 48,
+        "player": "O",
+        "action": "move",
+        "from": "b6",
+        "to": "d6",
+        "captured": null
+      },
+      {
+        "turn": 49,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "d2",
+        "captured": "d2"
+      },
+      {
+        "turn": 50,
+        "player": "O",
+        "action": "move",
+        "from": "e4",
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 51,
+        "player": "X",
+        "action": "move",
+        "from": "c5",
+        "to": "b6",
+        "captured": null
+      },
+      {
+        "turn": 52,
+        "player": "O",
+        "action": "move",
+        "from": "d6",
+        "to": "d5",
+        "captured": null
+      },
+      {
+        "turn": 53,
+        "player": "X",
+        "action": "move",
+        "from": "c4",
+        "to": "c5",
+        "captured": null
+      },
+      {
+        "turn": 54,
+        "player": "O",
+        "action": "move",
+        "from": "d5",
+        "to": "d6",
+        "captured": null
+      },
+      {
+        "turn": 55,
+        "player": "X",
+        "action": "move",
+        "from": "e5",
+        "to": "d5",
+        "captured": null
+      },
+      {
+        "turn": 56,
+        "player": "O",
+        "action": "move",
+        "from": "f4",
+        "to": "e4",
+        "captured": null
+      },
+      {
+        "turn": 57,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "g7",
+        "captured": "g7"
+      },
+      {
+        "turn": 58,
+        "player": "O",
+        "action": "move",
+        "from": "d6",
+        "to": "f6",
+        "captured": null
+      },
+      {
+        "turn": 59,
+        "player": "X",
+        "action": "move",
+        "from": "g4",
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 60,
+        "player": "O",
+        "action": "move",
+        "from": "f6",
+        "to": "d6",
+        "captured": null
+      },
+      {
+        "turn": 61,
+        "player": "X",
+        "action": "move",
+        "from": "f2",
+        "to": "d2",
+        "captured": null
+      },
+      {
+        "turn": 62,
+        "player": "O",
+        "action": "move",
+        "from": "g1",
+        "to": "g4",
+        "captured": null
+      },
+      {
+        "turn": 63,
+        "player": "X",
+        "action": "move",
+        "from": "f4",
+        "to": "f6",
+        "captured": null
+      },
+      {
+        "turn": 64,
+        "player": "O",
+        "action": "move",
+        "from": "b4",
+        "to": "c4",
+        "captured": null
+      },
+      {
+        "turn": 65,
+        "player": "X",
+        "action": "move",
+        "from": "b2",
+        "to": "b4",
+        "captured": null
+      },
+      {
+        "turn": 66,
+        "player": "O",
+        "action": "move",
+        "from": "g4",
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 67,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "a4",
+        "captured": "a4"
+      },
+      {
+        "turn": 68,
+        "player": "O",
+        "action": "move",
+        "from": "f4",
+        "to": "f2",
+        "captured": null
+      },
+      {
+        "turn": 69,
+        "player": "X",
+        "action": "move",
+        "from": "d7",
+        "to": "g7",
+        "captured": null
+      },
+      {
+        "turn": 70,
+        "player": "O",
+        "action": "move",
+        "from": "c4",
+        "to": "c3",
+        "captured": null
+      },
+      {
+        "turn": 71,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "c3",
+        "captured": "c3"
+      },
+      {
+        "turn": 72,
+        "player": "O",
+        "action": "move",
+        "from": "f2",
+        "to": "g1",
+        "captured": null
+      },
+      {
+        "turn": 73,
+        "player": "X",
+        "action": "move",
+        "from": "b2",
+        "to": "a1",
+        "captured": null
+      },
+      {
+        "turn": 74,
+        "player": "O",
+        "action": "move",
+        "from": "a7",
+        "to": "a4",
+        "captured": null
+      },
+      {
+        "turn": 75,
+        "player": "X",
+        "action": "move",
+        "from": "d3",
+        "to": "e3",
+        "captured": null
+      },
+      {
+        "turn": 76,
+        "player": "O",
+        "action": "move",
+        "from": "a4",
+        "to": "a7",
+        "captured": null
+      },
+      {
+        "turn": 77,
+        "player": "X",
+        "action": "move",
+        "from": "b4",
+        "to": "a4",
+        "captured": null
+      },
+      {
+        "turn": 78,
+        "player": "O",
+        "action": "move",
+        "from": "g1",
+        "to": "g4",
+        "captured": null
+      },
+      {
+        "turn": 79,
+        "player": "X",
+        "action": "move",
+        "from": "a4",
+        "to": "b4",
+        "captured": null
+      },
+      {
+        "turn": 80,
+        "player": "O",
+        "action": "move",
+        "from": "g4",
+        "to": "f4",
+        "captured": null
+      },
+      {
+        "turn": 81,
+        "player": "X",
+        "action": "move",
+        "from": "a1",
+        "to": "a4",
+        "captured": null
+      },
+      {
+        "turn": 82,
+        "player": "O",
+        "action": "move",
+        "from": "d6",
+        "to": "d7",
+        "captured": null
+      },
+      {
+        "turn": 83,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "f4",
+        "captured": "f4"
+      },
+      {
+        "turn": 84,
+        "player": "O",
+        "action": "move",
+        "from": "e4",
+        "to": "e3",
+        "captured": null
+      },
+      {
+        "turn": 85,
+        "player": "X",
+        "action": "move",
+        "from": "d1",
+        "to": "a1",
+        "captured": null
+      },
+      {
+        "turn": 86,
+        "player": "O",
+        "action": "move",
+        "from": "e3",
+        "to": "f2",
+        "captured": null
+      },
+      {
+        "turn": 87,
+        "player": "X",
+        "action": "capture",
+        "from": null,
+        "to": "d7",
+        "captured": "d7"
+      }
+    ],
+    "winner": "O"
   }
 ]
