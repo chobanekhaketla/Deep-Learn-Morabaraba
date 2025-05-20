@@ -293,7 +293,7 @@ def move_piece(from_pos, to_pos):
         else:
             info_message = ""
             switch_player()
-            log_move(current_player, "place", None, pos, None)        
+            log_move(current_player, "move", from_pos, to_pos, None)        
     draw_board()
 
 def remove_piece(pos):
