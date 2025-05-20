@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 import pygame, sys, random
 from ai_dqn import DeepQAgent  # Import the Deep Q-learning agent
+import os
+import json
+
+DATASET_FILE = "morabararaba_dataset.json"
+
+# Load the dataset if it exists, otherwise create an empty one.
+if os.path.exists(DATASET_FILE):
+    with open(DATASET_FILE, "r") as f:
+        dataset = json.load(f)
+else:
+    all_games = []
+
+current_game_moves = []
+turn_counter = 0
 
 # Initialize pygame and set up the window.
 pygame.init()
@@ -129,6 +143,18 @@ info_message = ""
 game_over = False
 paused = False
 
+def log_move(player, action, from_pos, to_pos, captured):
+    global turn_counter
+    move = {
+        "turn": turn_counter,
+        "player": player,
+        "action": action,
+        "from": from_pos,
+        "to": to_pos,
+        "captured": captured
+    }
+    current_game_moves.append(move)
+    turn_counter += 1
 
 def draw_info():
     global restart_button_rect, exit_button_rect
@@ -211,7 +237,7 @@ def draw_board():
     
     draw_info()
 
-    # 🔥 Draw heatmap if AI is active
+    # Draw heatmap if AI is active
     if AI_MODE:
         agent = deep_agent_x if current_player == 'X' else deep_agent_o
         draw_heatmap(agent)
@@ -245,6 +271,7 @@ def place_piece(pos):
         else:
             info_message = ""
             switch_player()
+            log_move(current_player, "place", None, pos, None)
             if pieces_placed['X'] == TOTAL_PIECES and pieces_placed['O'] == TOTAL_PIECES:
                 phase = "moving"
     draw_board()
@@ -266,6 +293,7 @@ def move_piece(from_pos, to_pos):
         else:
             info_message = ""
             switch_player()
+            log_move(current_player, "place", None, pos, None)        
     draw_board()
 
 def remove_piece(pos):
@@ -281,8 +309,10 @@ def remove_piece(pos):
         else:
             phase = "placing"
         switch_player()
+        log_move(current_player, "capture", None, pos, pos)
     else:
         info_message = "Cannot remove that piece!"
+
     draw_board()
 
 def switch_player():
@@ -457,6 +487,22 @@ while running:
                 win_counts[win_player] += 1
                 game_over = True
                 draw_board()
+
+                # Record game result and save to dataset.
+                winner = win_player # already defined
+                all_games.append({
+                    "moves": current_game_moves,
+                    "winner": winner
+                })
+
+                # Save the dataset to a JSON file.
+                with open(DATASET_FILE, "w") as f:
+                    json.dump(all_games, f, indent=2)
+
+                # Reset turn counter and moves for the next game
+                turn_counter = 1
+                current_game_moves.clear()
+
                 # Terminal rewards update using deep agents.
                 if win_player == 'X':
                     deep_agent_x.update(1, board_state, positions)
